@@ -9,9 +9,26 @@ public class PointTest {
     public void when00to20then2() {
         double expected = 2;
         Point a = new Point(0, 0);
-        Point b = new Point(0, 2);
+        Point b = new Point(2, 0);
         double dist = a.distance(b);
-        double out = dist;
-        Assert.assertEquals(expected, out, 0.01);
+        Assert.assertEquals(expected, dist, 0.01);
+    }
+
+    @Test
+    public void when12to10then2() {
+        double expected = 2;
+        Point a = new Point(1, 2);
+        Point b = new Point(1, 0);
+        double dist = a.distance(b);
+        Assert.assertEquals(expected, dist, 0.01);
+    }
+
+    @Test
+    public void when10to40then3() {
+        double expected = 3;
+        Point a = new Point(1, 0);
+        Point b = new Point(4, 0);
+        double dist = a.distance(b);
+        Assert.assertEquals(expected, dist, 0.01);
     }
 }
